@@ -1,38 +1,12 @@
-# Memory Card Dashboard
+# React + Vite
 
-## Overview
-The **Memory Card Dashboard** is a React-based project designed to reinforce concepts such as state management using hooks and fetching data from an external API. The goal is to build a memory game where users click on unique cards to score points while ensuring cards are randomized upon each click.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
-- Fetch images and data dynamically from an external API (e.g., Giphy, Pokémon API, etc.).
-- Track and display the **current score** and **best score**.
-- Shuffle the cards randomly every time a user clicks one.
-- Responsive and visually appealing UI.
-- Deployed online for public access.
+Currently, two official plugins are available:
 
-## Installation
-To set up and run the project locally, follow these steps:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Prerequisites
-Ensure you have the following installed:
-- [Node.js](https://nodejs.org/)
-- [Git](https://git-scm.com/)
+## Expanding the ESLint configuration
 
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/memory-card-dashboard.git
-   ```
-2. Navigate into the project folder:
-   ```bash
-   cd memory-card-dashboard
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the development server:
-   ```bash
-   npm start
-   ```
-5. Open your browser and visit `http://localhost:3000/` to play the game.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
