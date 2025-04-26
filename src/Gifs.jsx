@@ -4,12 +4,31 @@ function PokemonCards() {
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=12") 
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=12")
       .then((res) => res.json())
       .then((data) => {
-        setPokemons(data.results);
+        const pokemonsWithId = data.results.map((pokemon) => {
+          // extract ID from URL
+          const urlParts = pokemon.url.split("/");
+          const id = urlParts[urlParts.length - 2]; // get second last part
+          return { ...pokemon, id };
+        });
+        setPokemons(shuffleArray(pokemonsWithId));
       });
   }, []);
+
+  const shuffleArray = (array) => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
+  const handleCardClick = () => {
+    setPokemons((prevPokemons) => shuffleArray(prevPokemons));
+  };
 
   return (
     <div
@@ -18,14 +37,16 @@ function PokemonCards() {
         gridTemplateColumns: "repeat(3, 1fr)",
         gap: "24px",
         padding: "20px",
-        justifyItems: "center", 
-        alignItems: "center", 
+        justifyItems: "center",
+        alignItems: "center",
       }}
     >
-      {pokemons.map((pokemon, index) => (
+      {pokemons.map((pokemon) => (
         <div
-          key={index}
+          key={pokemon.name}
+          onClick={handleCardClick}
           style={{
+            cursor: "pointer",
             border: "1px solid #ccc",
             borderRadius: "12px",
             padding: "1.5rem",
@@ -37,10 +58,11 @@ function PokemonCards() {
             alignItems: "center",
             backgroundColor: "#f0f0f0",
             boxShadow: "0 6px 12px rgba(0,0,0,0.15)",
+            transition: "transform 0.2s ease",
           }}
         >
           <img
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index + 1}.png`}
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
             alt={pokemon.name}
             style={{ width: "140px", height: "140px", marginBottom: "1rem" }}
           />
@@ -54,4 +76,3 @@ function PokemonCards() {
 }
 
 export default PokemonCards;
-
