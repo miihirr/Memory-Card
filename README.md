@@ -28,11 +28,11 @@ The game fetches Pokémon images dynamically from the PokéAPI and shuffles them
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/miihirr/Memory-Card.git
    ```
 2. Navigate to the project folder:
    ```bash
-   cd your-repo-name
+   cd Memory-Card
    ```
 3. Install dependencies:
    ```bash
