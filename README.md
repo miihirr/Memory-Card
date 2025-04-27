@@ -1,12 +1,47 @@
-# React + Vite
+# Pokémon Memory Card Game 🎴
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun memory card game built with **React**!  
+Click on different Pokémon without repeating any — each correct click earns you points!  
+The game fetches Pokémon images dynamically from the PokéAPI and shuffles them after every click.
 
-Currently, two official plugins are available:
+## 🕹 How to Play
+- Click on a Pokémon you haven't clicked yet to earn a point.
+- If you click the same Pokémon twice, your score resets!
+- Your **Best Score** is tracked across games.
+- Win by successfully clicking all 12 different Pokémon without repeating!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- React Hooks (`useState`, `useEffect`) for state management.
+- Fetch data dynamically from [PokéAPI](https://pokeapi.co/).
+- Shuffle the Pokémon cards after every click.
+- Scoreboard with Current Score and Best Score.
+- Responsive grid layout for cards.
+- Clean, modern UI with hover animations.
 
-## Expanding the ESLint configuration
+## 📦 Built With
+- React
+- JavaScript (ES6+)
+- HTML/CSS
+- PokéAPI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd your-repo-name
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+
+
+---
