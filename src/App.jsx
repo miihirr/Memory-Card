@@ -1,8 +1,8 @@
 import './App.css'
-import Gifs from './Gifs'
+import PokemonCards from './PokemonCards'
 function App() {
   return(
-    <Gifs />
+    <PokemonCards />
   );
 }
 

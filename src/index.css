@@ -1,0 +1,92 @@
+.pokemon-game-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  text-align: center;
+  padding: 20px;
+}
+
+.game-header {
+  margin-bottom: 20px;
+}
+
+.game-header h1 {
+  color: #3498db;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.game-header p {
+  color: #555;
+}
+
+.score-board {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.game-won-message {
+  margin-top: 20px;
+}
+
+.game-won-message h2 {
+  font-size: 1.5rem;
+  color: #2ecc71;
+}
+
+.game-won-message button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.game-won-message button:hover {
+  background-color: #2980b9;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.pokemon-card {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-img {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 15px;
+}
+
+.pokemon-name {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: #333;
+  margin: 0;
+}
