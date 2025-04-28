@@ -40,7 +40,7 @@ The game fetches Pokémon images dynamically from the PokéAPI and shuffles them
    ```
 4. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 
